@@ -1,7 +1,12 @@
             <footer>
-                <p>Contact us by <a href="">Email</a> or <a href="">Call</a></p>
+                <div class="contact">
+                    <i data-feather="phone"></i>
+                    <p>0637297847</p>
+                    <i data-feather="mail"></i>
+                    <p><a href="mailto:mounir2375@gmail.com">mounir2375@gmail.com</a></p>
+                </div>
                 <a href="">Legal Notices</a>
-                <a href="">Privacy</a>
+                <a href="http://localhost/zm/privacy-policy">Protection des données</a>
             </footer>
         </div>
         <?php wp_footer(); ?>
