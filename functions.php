@@ -37,7 +37,7 @@ function product_weight () {
 function product_stock_quantity () {
     global $product;
     $stock = $product->get_stock_quantity();
-    echo '<div class="stock">' . $stock . ' dishes left</div>';
+    echo '<div class="stock">' . $stock . ' plats restantes</div>';
 }
 
 // remove breadcrumb
@@ -76,8 +76,15 @@ function jk_dequeue_styles( $enqueue_styles ) {
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
-// remove quantity selector
+// replace stock wording
 
+add_filter( 'woocommerce_get_availability_text', 'bbloomer_custom_get_availability_text', 99, 2 );
+
+function bbloomer_custom_get_availability_text( $availability, $product ) {
+   $stock = $product->get_stock_quantity();
+   if ( $product->is_in_stock() && $product->managing_stock() ) $availability = $stock . ' plats restants';
+   return $availability;
+}
 
 // add day information
 

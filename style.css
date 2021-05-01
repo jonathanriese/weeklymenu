@@ -314,9 +314,10 @@ ul.products {
 }
 
 li.product {
+  box-sizing: border-box;
   padding: 1%;
-  flex: 0 1 20%;
-  margin: 2%;
+  flex: 0 1 31%;
+  margin: 1%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -767,4 +768,80 @@ label.woocommerce-form-login__rememberme {
 
 p.lost_password {
   margin-bottom: 2rem;
+}
+
+/* mobile */
+
+.contact .header {
+  font-weight: bold;
+}
+
+@media (min-width: 800px) {
+  .contact .header {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  menu {
+    margin: 1rem 0;
+  }
+  h3.header_logo {
+    margin: 0 0 4px 0.5rem;
+  }
+  nav.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3.5rem;
+    left: 2rem;
+    background-color: #CFEFE5;
+    width: 100%;
+    padding: 2rem 0;
+  }
+  .active a {
+    margin-bottom: 2rem;
+  }
+  main.pages.landing {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 0;
+  }
+  main {
+    margin-top: 0;
+  }
+  div.featured_img, div.woocommerce-product-gallery {
+    /* display: none; */
+    height: 80vw;
+    width: 100%;
+  }
+  .featured_img img {
+    width: 100%;
+  }
+  footer {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+  footer > * {
+    margin-bottom: 1rem;
+  }
+  footer .contact {
+    flex-direction: column;
+  }
+  .contact svg {
+    display: none;
+  }
+  li.product {
+    flex: 1 1 100%;
+  }
+  div.product {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .product img {
+    height: 80vw;
+  }
 }

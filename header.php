@@ -11,7 +11,7 @@
             <h3 class="header_logo">
                 <a href="<?php echo site_url();?>">zm</a>
             </h3>
-            <nav>
+            <nav class="nav-menu">
                 <a href="<?php echo site_url('/commander');?>">Commander</a>
                 <a href="<?php echo site_url('/mariages');?>">Mariages</a>
                 <a href="<?php echo site_url('/le-cuisinier');?>">Le Cuisinier</a>

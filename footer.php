@@ -1,5 +1,6 @@
             <footer>
                 <div class="contact">
+                    <p class="header">Contact</h2>
                     <i data-feather="phone"></i>
                     <p>0637297847</p>
                     <i data-feather="mail"></i>

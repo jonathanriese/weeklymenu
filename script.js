@@ -15,3 +15,11 @@ var directionMenu = 1;
     animationMenu.play();
     directionMenu = -directionMenu;
 });
+
+const navMenu = document.querySelector(".nav-menu");
+
+iconMenu.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+        navMenu.classList.toggle("active");
+}
